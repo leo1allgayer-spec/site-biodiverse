@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BIODIVERSE | Consultoria e Engenharia Ambiental</title>
+<!-- Typography: Space Grotesk & Work Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#191c1b",
+            "on-secondary-fixed": "#002018",
+            "surface": "#f8faf8",
+            "secondary-fixed": "#79f9d3",
+            "on-tertiary-container": "#a1b5c3",
+            "surface-dim": "#d8dad9",
+            "tertiary-container": "#344753",
+            "secondary-container": "#79f9d3",
+            "primary": "#003625",
+            "tertiary-fixed": "#d1e5f4",
+            "outline-variant": "#c0c9c2",
+            "outline": "#707973",
+            "primary-fixed": "#b5efd2",
+            "on-primary-fixed-variant": "#16503b",
+            "technical-sage": "#789D8B",
+            "state-alert": "#C94A29",
+            "surface-container-high": "#e6e9e7",
+            "on-error": "#ffffff",
+            "surface-dark": "#0B261C",
+            "on-secondary-fixed-variant": "#005140",
+            "on-surface": "#191c1b",
+            "tertiary": "#1e313c",
+            "on-primary": "#ffffff",
+            "surface-container": "#eceeec",
+            "tertiary-fixed-dim": "#b5c9d8",
+            "inverse-on-surface": "#eff1ef",
+            "on-surface-variant": "#404944",
+            "on-secondary-container": "#00725b",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#99d3b7",
+            "inverse-surface": "#2e3130",
+            "primary-fixed-dim": "#99d3b7",
+            "error-container": "#ffdad6",
+            "surface-variant": "#e1e3e1",
+            "secondary": "#006b55",
+            "surface-subtle": "#F4F6F4",
+            "surface-container-highest": "#e1e3e1",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#002115",
+            "border-active": "#134E39",
+            "surface-tint": "#316852",
+            "primary-container": "#134e39",
+            "on-primary-container": "#85bea3",
+            "error": "#ba1a1a",
+            "border-grid": "#D7DDD9",
+            "surface-bright": "#f8faf8",
+            "background": "#f8faf8",
+            "secondary-fixed-dim": "#59dcb8",
+            "on-tertiary-fixed-variant": "#364955",
+            "surface-pure": "#FFFFFF",
+            "on-tertiary-fixed": "#091e28",
+            "surface-container-low": "#f2f4f2"
+          },
+          "borderRadius": {
+            "DEFAULT": "0px",
+            "none": "0px",
+            "sm": "0px",
+            "md": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          "spacing": {
+            "container-max": "80rem",
+            "space-2xl": "3rem",
+            "space-sm": "0.75rem",
+            "space-xxs": "0.25rem",
+            "space-3xl": "4.5rem",
+            "space-xs": "0.5rem",
+            "gutter-mobile": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "display-hero": ["Space Grotesk"],
+            "label-interactive": ["Space Grotesk"],
+            "body-lg": ["Work Sans"],
+            "body-sm": ["Work Sans"],
+            "headline-md": ["Space Grotesk"],
+            "display-hero-mobile": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "label-technical": ["Space Grotesk"],
+            "body-md": ["Work Sans"]
+          },
+          "fontSize": {
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "label-interactive": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-technical": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F4F6F4;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #789D8B;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen">
+<!-- ================= TOP NAVIGATION BAR ================= -->
+<header class="bg-surface-pure border-b border-border-grid shadow-[0px_4px_0px_0px_rgba(19,78,57,0.08)] sticky top-0 z-50 w-full">
+<div class="h-[72px] w-full px-6 lg:px-12 max-w-container-max mx-auto flex items-center justify-between">
+<!-- Brand Anchor -->
+<a class="flex items-center gap-3 group focus:outline-none" href="#">
+<div class="w-8 h-8 bg-primary flex items-center justify-center border border-border-active">
+<span class="material-symbols-outlined text-surface-pure text-lg" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight font-bold text-primary">BIODIVERSE</span>
+<span class="font-label-technical text-[9px] tracking-widest text-technical-sage uppercase -mt-1">Serviços Ambientais</span>
+</div>
+</a>
+<!-- Desktop Links -->
+<nav class="hidden lg:flex items-center gap-7">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-interactive text-label-interactive" href="#inicio">Início</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#solucoes">Licenciamento Ambiental</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#solucoes">Gestão Ambiental</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#solucoes">Assessoria Jurídica</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#posicionamento">Sobre</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#contato">Contato</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 bg-primary hover:bg-[#00A887] text-surface-pure px-5 py-2.5 font-label-interactive text-label-interactive transition-colors duration-150 border border-primary" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Fale com a Biodiverse</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ================= HERO SECTION (LZ AMBIENTAL STYLE) ================= -->
+<section class="relative bg-surface-dark text-surface-pure min-h-[640px] lg:min-h-[720px] flex items-center overflow-hidden border-b border-border-grid" id="inicio">
+<!-- Background Technical Imagery -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
+<img alt="Consultoria Ambiental Especializada" class="w-full h-full object-cover object-center" data-alt="Technical aerial orthophoto of an engineered industrial environmental intervention site, showing water quality testing basins and precise environmental buffer zones under diffuse overcast laboratory lighting, grading from deep forest green to slate teal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeo3Yat4cvtQWpmvLTOHZ-oH5BcYh-SK1xbP4Kihiypl55F7WXgftpLFw7vigC_oMRkqnYgMgS81oHIn-jkGWjBbxq1JquJ0rp-d0YXwSrfes2gYdHeueJ31JcozUSnprU2FRNFXRMYdwLauQWnz-GPE3Kj-GD9MDodsfALJnyt_rs_gwL8U_h1GRIoHsHwPINQw7_eUbL8_a0doXPeQ440OfxIzIcnHeDfUYv-P0gDX3Gv1i2eFzx"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/90 to-surface-dark/60 z-0"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-6 lg:px-12 py-20 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8 space-y-6">
+<!-- Top Spec Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-dark/80 border border-technical-sage/40">
+<span class="w-1.5 h-1.5 bg-secondary-fixed"></span>
+<span class="font-label-technical text-label-technical text-secondary-fixed tracking-widest uppercase">
+              Consultoria Técnica e Ambiental · Segurança Jurídica e Regulatória
+            </span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero tracking-tight text-surface-pure max-w-3xl">
+            Soluções ambientais para sua empresa operar com <span class="text-secondary-fixed underline decoration-2 underline-offset-8">segurança</span> e regularidade.
+          </h1>
+<!-- Hero Subtitle -->
+<p class="font-body-lg text-body-lg text-surface-subtle/90 max-w-2xl font-light leading-relaxed">
+            Licenciamento ambiental, gestão ambiental e assessoria jurídica ambiental para empresas que precisam estar em rigorosa conformidade com a legislação e preparadas para os desafios do negócio.
+          </p>
+<!-- CTAs -->
+<div class="pt-4 flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-3 bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed px-7 py-3.5 font-label-interactive text-label-interactive transition-colors" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0" rel="noopener noreferrer" target="_blank">
+<span>Solicite um orçamento</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-transparent hover:bg-surface-pure/10 text-surface-pure border border-surface-pure/40 px-7 py-3.5 font-label-interactive text-label-interactive transition-colors" href="#solucoes">
+<span>Conheça nossas soluções</span>
+</a>
+</div>
+</div>
+<!-- Floating Authority Card (LZ Style) -->
+<div class="lg:col-span-4">
+<div class="bg-surface-pure text-on-surface p-6 border-t-4 border-border-active shadow-[0px_4px_0px_0px_rgba(0,0,0,0.3)]">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<span class="font-label-technical text-label-technical text-primary uppercase">Garantia Regulatória</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Conformidade e regularização</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 leading-relaxed">
+              Atuação integrada junto a órgãos municipais, estaduais (FEPAM) e federais (IBAMA) para assegurar previsibilidade e blindagem operacional.
+            </p>
+<div class="grid grid-cols-2 gap-4 border-t border-border-grid pt-4">
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-primary">100%</p>
+<p class="font-body-sm text-body-sm text-technical-sage">Rigor Estatutário</p>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-primary">0 Passivos</p>
+<p class="font-body-sm text-body-sm text-technical-sage">Prevenção Ativa</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= POSITIONING STATEMENT ("NOSSA FORMA DE ATUAR") ================= -->
+<section class="py-24 bg-surface-pure border-b border-border-grid" id="posicionamento">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<!-- Section Tag Header -->
+<div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+<div class="inline-flex items-center gap-2">
+<div class="w-8 h-[2px] bg-primary"></div>
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest">Nossa Forma de Atuar</span>
+<div class="w-8 h-[2px] bg-primary"></div>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary tracking-tight">
+          Grandes empreendimentos exigem mais do que conhecimento técnico.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed">
+          Exigem a capacidade de compreender como fatores ambientais, regulatórios, operacionais e territoriais se relacionam. Nossa equipe multidisciplinar une engenharia ambiental e corpo jurídico para formular defesas sólidas e destravar operações com total conformidade.
+        </p>
+<p class="font-body-md text-body-md font-semibold text-primary">
+          Mais do que elaborar estudos, oferecemos segurança técnica, previsibilidade e fundamentos sólidos para cada etapa do negócio.
+        </p>
+</div>
+<!-- 3 Core Strategic Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<div class="p-8 bg-surface-subtle border-t-2 border-border-active">
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-3">Pilar 01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Atendimento Técnico Rigoroso</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Metodologias precisas e levantamentos empíricos que atendem aos termos de referência mais exigentes dos órgãos fiscalizadores.
+          </p>
+</div>
+<div class="p-8 bg-surface-subtle border-t-2 border-border-active">
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-3">Pilar 02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Visão Estratégica Integrada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Análise simultânea dos condicionantes técnicos e jurídicos para antecipar exigências, reduzir prazos e mitigar riscos civis e administrativos.
+          </p>
+</div>
+<div class="p-8 bg-surface-subtle border-t-2 border-border-active">
+<span class="font-label-technical text-label-technical text-secondary uppercase block mb-3">Pilar 03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Compromisso com o Negócio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Acompanhamento constante junto à liderança corporativa, transformando obrigações ambientais em vantagens operacionais sustentáveis.
+          </p>
+</div>
+</div>
+<!-- Institutional Metrics Strip (Identical in Cadence to LZ) -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-12 border-t border-border-grid">
+<div class="p-4 border-l-2 border-primary">
+<p class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">+350</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Projetos Conduzidos com rigor técnico</p>
+</div>
+<div class="p-4 border-l-2 border-primary">
+<p class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">+180</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Empresas e Indústrias Atendidas</p>
+</div>
+<div class="p-4 border-l-2 border-primary">
+<p class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">Multi</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Engenharia + Direito Ambiental</p>
+</div>
+<div class="p-4 border-l-2 border-primary">
+<p class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">FEPAM/IBAMA</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Conformidade e órgãos municipais</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= DIFFERENTIALS ("O QUE ORIENTA NOSSA ATUAÇÃO" - LZ STYLE NUMBERS) ================= -->
+<section class="py-24 bg-surface-subtle border-b border-border-grid">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<div class="mb-14">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase tracking-widest block mb-2">Nossa Forma de Pensar</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">O que orienta nossa atuação.</h2>
+</div>
+<!-- 5 Columns with teal indicator bars -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+<!-- 01 -->
+<div class="space-y-4">
+<div class="w-full h-1 bg-secondary"></div>
+<span class="font-label-technical text-label-technical text-primary font-bold text-sm block">01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Atendimento Personalizado</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Cada cliente possui particularidades locacionais e industriais únicas. Não usamos soluções genéricas; desenhamos estratégias sob medida.
+          </p>
+</div>
+<!-- 02 -->
+<div class="space-y-4">
+<div class="w-full h-1 bg-secondary"></div>
+<span class="font-label-technical text-label-technical text-primary font-bold text-sm block">02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Experiência Comprovada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Histórico consolidado em protocolos ambientais de alta complexidade, aprovação de licenças e defesas bem-sucedidas.
+          </p>
+</div>
+<!-- 03 -->
+<div class="space-y-4">
+<div class="w-full h-1 bg-secondary"></div>
+<span class="font-label-technical text-label-technical text-primary font-bold text-sm block">03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Visão Preventiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Identificamos não-conformidades antes da autuação ou interdição, salvaguardando a continuidade das atividades da empresa.
+          </p>
+</div>
+<!-- 04 -->
+<div class="space-y-4">
+<div class="w-full h-1 bg-secondary"></div>
+<span class="font-label-technical text-label-technical text-primary font-bold text-sm block">04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Agilidade Contínua</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Monitoramento constante dos prazos de condicionantes, renovações tempestivas e comunicação ágil com o cliente.
+          </p>
+</div>
+<!-- 05 -->
+<div class="space-y-4">
+<div class="w-full h-1 bg-secondary"></div>
+<span class="font-label-technical text-label-technical text-primary font-bold text-sm block">05</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Soluções Integradas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Articulação fluida entre laudos técnicos periciais e peças de argumentação jurídica com rigor e assertividade.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= CORE SOLUTIONS / SERVICES (INSPIRADO NOS CARDS LZ) ================= -->
+<section class="py-24 bg-surface-pure border-b border-border-grid" id="solucoes">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="font-label-technical text-label-technical text-technical-sage uppercase tracking-widest block mb-2">Nossas Soluções</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Soluções para desafios regulatórios complexos.</h2>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-interactive text-label-interactive hover:text-secondary transition-colors group" href="#contato">
+<span>Ver todas as soluções</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Solutions Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- CARD 01: LICENCIAMENTO AMBIENTAL (Destaque visual) -->
+<div class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 01</span>
+<span class="bg-[#E6F5F1] text-secondary border border-secondary px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase font-bold">Prioridade Máxima</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Licenciamento Ambiental</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+              Condução integral dos processos licitatórios nas três fases regulatórias (LP, LI e LO). Elaboramos Estudos de Impacto, Planos de Controle Ambiental e acompanhamos a tramitação junto à FEPAM, IBAMA e secretarias municipais.
+            </p>
+<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Licença Prévia, de Instalação e de Operação
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Renovação tempestiva e controle de prazos
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Diagnósticos, EIA/RIMA e RCA/PCA
+              </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
+<span>Saiba mais</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 02: GESTÃO AMBIENTAL -->
+<div class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 02</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase">Operacional</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Gestão Ambiental</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+              Monitoramento preventivo e implementação de rotinas de sustentabilidade para manter a empresa permanentemente regular perante as condicionantes estabelecidas nas licenças ambientais ativas.
+            </p>
+<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Plano de Gerenciamento de Resíduos Sólidos (PGRS)
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Monitoramento e auditoria de efluentes e emissões
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Gestão e cumprimento de condicionantes operacionais
+              </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
+<span>Saiba mais</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 03: ASSESSORIA JURÍDICA AMBIENTAL -->
+<div class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 03</span>
+<span class="bg-[#E6F5F1] text-secondary border border-secondary px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase font-bold">Defesa &amp; TACs</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Assessoria Jurídica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+              Advocacia preventiva e contenciosa especializada em Direito Ambiental. Defesa técnica perante autos de infração, celebração de Termos de Ajustamento de Conduta (TAC) e desconstituição de penalidades arbitrárias.
+            </p>
+<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Defesas administrativas de multas e embargos
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Negociação e acompanhamento de TACs e Termos
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Pareceres técnicos jurídicos e Due Diligence ambiental
+              </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
+<span>Saiba mais</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= PROBLEM / PAIN POINT SECTION (DARK DRAMATIC CONTRAST) ================= -->
+<section class="py-24 bg-surface-dark text-surface-pure border-b border-border-grid relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-[#134E39] border border-secondary-fixed/40">
+<span class="w-1.5 h-1.5 bg-secondary-fixed"></span>
+<span class="font-label-technical text-label-technical text-secondary-fixed tracking-widest uppercase">Segurança Operacional</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg tracking-tight leading-tight">
+            Sua empresa está preparada para as exigências ambientais?
+          </h2>
+<p class="font-body-lg text-body-lg text-surface-subtle font-light leading-relaxed">
+            Licenças vencidas, processos travados em órgãos ambientais ou notificações administrativas podem paralisar suas operações do dia para a noite, acarretando prejuízos financeiros severos e responsabilidade civil e penal.
+          </p>
+<div class="p-6 bg-[#002115] border-l-4 border-secondary-fixed space-y-2">
+<p class="font-label-interactive text-label-interactive text-secondary-fixed">Atuação Imediata em Situações Críticas:</p>
+<p class="font-body-sm text-body-sm text-technical-sage">
+              Atuamos rapidamente na resposta a autos de infração e elaboração de planos de ação emergenciais junto à fiscalização para evitar embargos operacionais.
+            </p>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center gap-3 bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed px-8 py-4 font-label-interactive text-label-interactive transition-colors" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Preciso+de+ajuda+urgente+com+quest%C3%B5es+ambientais.&amp;type=phone_number&amp;app_absent=0" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span>Fale com um especialista</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="border border-border-active bg-[#002115]/80 p-8 space-y-6">
+<h4 class="font-headline-sm text-headline-sm text-surface-pure border-b border-border-active pb-4">
+              Sinais de vulnerabilidade imediata:
+            </h4>
+<div class="space-y-4 font-body-sm text-body-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-state-alert text-lg mt-0.5">warning</span>
+<div>
+<strong class="text-surface-pure block">Condicionantes sem protocolo:</strong>
+<span class="text-technical-sage">Prazos vencidos para envio de relatórios e laudos laboratoriais.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-state-alert text-lg mt-0.5">warning</span>
+<div>
+<strong class="text-surface-pure block">Notificações e Ofícios sem resposta:</strong>
+<span class="text-technical-sage">Risco de conversão em auto de infração grave e arbitramento de multa.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-state-alert text-lg mt-0.5">warning</span>
+<div>
+<strong class="text-surface-pure block">Ampliações não licenciadas:</strong>
+<span class="text-technical-sage">Alterações estruturais de planta sem a devida LI ou LO de ampliação.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= PROCESS / JOURNEY (COMO PODEMOS AJUDAR) ================= -->
+<section class="py-24 bg-surface-pure border-b border-border-grid">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase tracking-widest block mb-2">Jornada de Atuação</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Como podemos ajudar sua empresa.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+          Da avaliação preliminar à blindagem jurídica contínua, nossa metodologia é estruturada em 6 etapas claras.
+        </p>
+</div>
+<!-- Linear Step Sequence -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="p-6 bg-surface-subtle border border-border-grid border-l-2 border-l-primary flex flex-col justify-between min-h-[160px]">
+<div>
+<span class="font-label-technical text-label-technical text-primary font-bold">01</span>
+<h4 class="font-headline-sm text-sm uppercase tracking-wide text-primary mt-2">Regularização</h4>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Diagnóstico de passivos e início do protocolo licitatório.</p>
+</div>
+<div class="p-6 bg-surface-subtle border border-border-grid border-l-2 border-l-primary flex flex-col justify-between min-h-[160px]">
+<div>
+<span class="font-label-technical text-label-technical text-primary font-bold">02</span>
+<h4 class="font-headline-sm text-sm uppercase tracking-wide text-primary mt-2">Adequação</h4>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Projetos de engenharia para atendimento das normas vigentes.</p>
+</div>
+<div class="p-6 bg-surface-subtle border border-border-grid border-l-2 border-l-primary flex flex-col justify-between min-h-[160px]">
+<div>
+<span class="font-label-technical text-label-technical text-primary font-bold">03</span>
+<h4 class="font-headline-sm text-sm uppercase tracking-wide text-primary mt-2">Prevenção</h4>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Auditoria interna e controle prévio de riscos operacionais.</p>
+</div>
+<div class="p-6 bg-surface-subtle border border-border-grid border-l-2 border-l-primary flex flex-col justify-between min-h-[160px]">
+<div>
+<span class="font-label-technical text-label-technical text-primary font-bold">04</span>
+<h4 class="font-headline-sm text-sm uppercase tracking-wide text-primary mt-2">Gestão</h4>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Acompanhamento contínuo de condicionantes e monitoramentos.</p>
+</div>
+<div class="p-6 bg-surface-subtle border border-border-grid border-l-2 border-l-primary flex flex-col justify-between min-h-[160px]">
+<div>
+<span class="font-label-technical text-label-technical text-primary font-bold">05</span>
+<h4 class="font-headline-sm text-sm uppercase tracking-wide text-primary mt-2">Defesa</h4>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Contestação de multas, autuações e suporte contencioso.</p>
+</div>
+<div class="p-6 bg-surface-subtle border border-border-grid border-l-2 border-l-primary flex flex-col justify-between min-h-[160px]">
+<div>
+<span class="font-label-technical text-label-technical text-primary font-bold">06</span>
+<h4 class="font-headline-sm text-sm uppercase tracking-wide text-primary mt-2">Assessoria</h4>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">Consultoria permanente para decisões corporativas estratégicas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SEGMENTOS ATENDIDOS ================= -->
+<section class="py-24 bg-surface-subtle border-b border-border-grid">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase tracking-widest block mb-2">Áreas de Atuação</span>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Segmentos Atendidos.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3">
+          Experiência técnica multissetorial com soluções adaptadas à complexidade regulatória de cada setor.
+        </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">factory</span>
+<h4 class="font-headline-sm text-base text-primary">Indústrias</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Química, metalúrgica, coureiro-calçadista e transformação.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">foundation</span>
+<h4 class="font-headline-sm text-base text-primary">Construção Civil</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Loteamentos, edificações residenciais e obras de infraestrutura.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">local_shipping</span>
+<h4 class="font-headline-sm text-base text-primary">Transportes &amp; Logística</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Transporte de produtos perigosos e centros de distribuição.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">landscape</span>
+<h4 class="font-headline-sm text-base text-primary">Mineração</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Extração mineral, saibreiras, jazidas de areia e rochas.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">store</span>
+<h4 class="font-headline-sm text-base text-primary">Comércio &amp; Postos</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Postos de combustíveis, oficinas mecânicas e lavagens.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">agriculture</span>
+<h4 class="font-headline-sm text-base text-primary">Agropecuária</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Silos, granjas, armazéns de grãos e silvicultura.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">domain</span>
+<h4 class="font-headline-sm text-base text-primary">Imobiliário</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Incorporações urbanas, condomínios fechados e complexos.</p>
+</div>
+<div class="p-6 bg-surface-pure border border-border-grid hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl mb-3">business_center</span>
+<h4 class="font-headline-sm text-base text-primary">Serviços &amp; Saúde</h4>
+<p class="font-body-sm text-xs text-technical-sage mt-1">Hospitais, clínicas veterinárias, laboratórios e lavanderias.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= B2B CONTACT FORM & CONVERSION SECTION ================= -->
+<section class="py-24 bg-surface-pure border-b border-border-grid" id="contato">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Context Side -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2">
+<span class="w-8 h-[2px] bg-primary"></span>
+<span class="font-label-technical text-label-technical text-primary uppercase tracking-widest">Contato Corporativo</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary tracking-tight">
+            Vamos conversar sobre a necessidade da sua empresa?
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+            Compreender o contexto, avaliar riscos e definir a estratégia técnica adequada são os primeiros passos para decisões seguras. Preencha o formulário e nossa equipe técnica retornará prontamente.
+          </p>
+<div class="space-y-4 pt-6 border-t border-border-grid">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="font-label-technical text-label-technical text-technical-sage uppercase">Plantão WhatsApp</p>
+<a class="font-headline-sm text-base text-primary hover:underline" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0">+55 (51) 99302-7557</a>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-label-technical text-label-technical text-technical-sage uppercase">E-mail Institucional</p>
+<span class="font-body-md text-body-md text-on-surface">contato@biodiverse.eco.br</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-technical text-label-technical text-technical-sage uppercase">Sede Operacional</p>
+<span class="font-body-md text-body-md text-on-surface">Novo Hamburgo / RS · Atendimento Nacional</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Card -->
+<div class="lg:col-span-7">
+<div class="bg-surface-subtle p-8 lg:p-10 border border-border-grid">
+<form class="space-y-5" onsubmit="event.preventDefault(); alert('Solicitação registrada com sucesso. Nossa equipe técnica entrará em contato em breve.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">Nome Completo *</label>
+<input class="w-full h-11 px-3.5 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" placeholder="Ex: Rodrigo Fagundes" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">Empresa *</label>
+<input class="w-full h-11 px-3.5 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" placeholder="Nome da sua empresa" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">Telefone / WhatsApp *</label>
+<input class="w-full h-11 px-3.5 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" placeholder="(00) 00000-0000" required="" type="tel"/>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">E-mail Corporativo *</label>
+<input class="w-full h-11 px-3.5 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" placeholder="seu.nome@empresa.com.br" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">Cidade / UF *</label>
+<input class="w-full h-11 px-3.5 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" placeholder="Ex: Novo Hamburgo / RS" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">Como podemos ajudar? *</label>
+<select class="w-full h-11 px-3 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" required="">
+<option value="">Selecione uma área prioritária</option>
+<option value="licenciamento">Licenciamento Ambiental (LP, LI, LO)</option>
+<option value="gestao">Gestão e Monitoramento Ambiental</option>
+<option value="juridico">Assessoria Jurídica / Defesa de Multas</option>
+<option value="estudos">Elaboração de Estudos / Laudos Técnicos</option>
+<option value="outro">Outra Necessidade Específica</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-technical text-label-technical text-primary uppercase mb-1.5">Descrição da Necessidade / Projeto</label>
+<textarea class="w-full p-3.5 bg-surface-pure border border-border-grid font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-2 focus:border-border-active" placeholder="Detalhe brevemente o estágio do empreendimento, órgãos envolvidos ou prazo crítico..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<input class="h-4 w-4 rounded-none text-primary border-technical-sage focus:ring-0" id="lgpd" required="" type="checkbox"/>
+<label class="font-body-sm text-xs text-on-surface-variant" for="lgpd">
+                  Concordo com o tratamento dos dados corporativos fornecidos para fins de atendimento técnico comercial.
+                </label>
+</div>
+<button class="w-full py-4 bg-primary hover:bg-[#00A887] text-surface-pure font-label-interactive text-label-interactive transition-colors flex items-center justify-center gap-2" type="submit">
+<span>Solicitar contato</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= INSTITUTIONAL FOOTER ================= -->
+<footer class="bg-surface-dark text-surface-pure border-t border-border-active">
+<div class="max-w-container-max mx-auto px-6 lg:px-12 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+<!-- Col 1: Brand Anchor -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-pure text-primary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-surface-pure">BIODIVERSE</span>
+</div>
+<p class="font-body-sm text-body-sm text-technical-sage max-w-sm leading-relaxed">
+            Consultoria técnica, engenharia ambiental e assessoria jurídica regulatória. Transformando obrigações ambientais em estabilidade e segurança jurídica.
+          </p>
+<div class="pt-2 flex items-center gap-3">
+<a class="w-8 h-8 border border-technical-sage/40 flex items-center justify-center text-technical-sage hover:text-secondary-fixed hover:border-secondary-fixed transition-colors" href="https://instagram.com/biodiverse_nh" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+<a class="w-8 h-8 border border-technical-sage/40 flex items-center justify-center text-technical-sage hover:text-secondary-fixed hover:border-secondary-fixed transition-colors" href="https://api.whatsapp.com/send/?phone=5551993027557" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+<a class="w-8 h-8 border border-technical-sage/40 flex items-center justify-center text-technical-sage hover:text-secondary-fixed hover:border-secondary-fixed transition-colors" href="mailto:contato@biodiverse.eco.br">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<!-- Col 2: Soluções -->
+<div>
+<h5 class="font-label-technical text-label-technical uppercase text-secondary-fixed tracking-wider mb-4">Soluções</h5>
+<ul class="space-y-2 font-body-sm text-body-sm text-technical-sage">
+<li><a class="hover:text-surface-pure transition-colors" href="#solucoes">Licenciamento LP, LI, LO</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#solucoes">Gestão Ambiental (PGRS)</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#solucoes">Assessoria Jurídica</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#solucoes">Defesa de Autos de Infração</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#solucoes">Due Diligence Ambiental</a></li>
+</ul>
+</div>
+<!-- Col 3: Institucional -->
+<div>
+<h5 class="font-label-technical text-label-technical uppercase text-secondary-fixed tracking-wider mb-4">Institucional</h5>
+<ul class="space-y-2 font-body-sm text-body-sm text-technical-sage">
+<li><a class="hover:text-surface-pure transition-colors" href="#posicionamento">Nossa Forma de Atuar</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#posicionamento">Nossa Forma de Pensar</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#solucoes">Segmentos Atendidos</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#">Compliance Ambiental</a></li>
+<li><a class="hover:text-surface-pure transition-colors" href="#">Certificações Técnicas</a></li>
+</ul>
+</div>
+<!-- Col 4: Contato & Unidade -->
+<div>
+<h5 class="font-label-technical text-label-technical uppercase text-secondary-fixed tracking-wider mb-4">Operações</h5>
+<p class="font-body-sm text-body-sm text-technical-sage mb-2">
+            Novo Hamburgo · Rio Grande do Sul<br/>
+            Atendimento em âmbito regional e nacional.
+          </p>
+<p class="font-body-sm text-body-sm text-surface-pure font-semibold mt-3">
+            Plantão Técnico:
+          </p>
+<p class="font-body-sm text-body-sm text-secondary-fixed">
+            +55 (51) 99302-7557
+          </p>
+</div>
+</div>
+<!-- Legal & Copyright Line -->
+<div class="pt-8 border-t border-technical-sage/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-body-sm text-technical-sage">
+<p>© 2025 Biodiverse Serviços Ambientais. Todos os direitos reservados. CNPJ: 00.000.000/0001-00.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-secondary-fixed transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Política de Privacidade</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Compliance Ambiental</a>
+<a class="hover:text-secondary-fixed transition-colors" href="#">Certificações Técnicas</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- ================= CONTEXTUAL FLOATING WHATSAPP CTA ================= -->
+<aside class="fixed bottom-6 right-6 z-50">
+<a class="group flex items-center gap-3 bg-secondary-fixed text-on-secondary-fixed px-4 py-3 shadow-[0px_4px_0px_0px_rgba(0,33,21,0.4)] border border-[#002115] hover:bg-surface-pure transition-all duration-150" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Vim+pelo+site+da+Biodiverse+e+gostaria+de+um+or%C3%A7amento.&amp;type=phone_number&amp;app_absent=0" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">chat</span>
+<div class="text-left leading-tight hidden sm:block">
+<span class="block font-label-technical text-[10px] tracking-wider uppercase opacity-80">Plantão Técnico</span>
+<span class="block font-label-interactive text-xs font-bold">Fale no WhatsApp</span>
+</div>
+</a>
+</aside>
+</body></html>
