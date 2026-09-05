@@ -142,14 +142,33 @@
     .custom-scroll::-webkit-scrollbar-thumb {
       background: #789D8B;
     }
-  </style>
+      :root { --header-height: 72px; }
+    [id] { scroll-margin-top: calc(var(--header-height) + 24px); }
+    .site-header-inner { min-height: 72px; gap: 24px; }
+    .site-header-inner > a, .site-header-inner > div { flex-shrink: 0; }
+    .site-nav { display: flex; align-items: center; gap: 24px; }
+    .site-nav a { white-space: nowrap; padding: 8px 0; color: #4c5650; border-bottom: 2px solid transparent; }
+    .site-nav a:hover, .site-nav a[aria-current] { color: #003b2b; border-bottom-color: #003b2b; }
+    .site-nav a:focus-visible { outline: 2px solid #128c7e; outline-offset: 4px; }
+    @media (max-width: 1399px) {
+      :root { --header-height: 128px; }
+      .site-header-inner { flex-wrap: wrap; gap: 0 16px; padding-top: 12px; }
+      .site-nav { order: 3; flex-basis: 100%; min-width: 0; overflow-x: auto; gap: 24px; padding: 8px 2px; }
+    }
+    @media (max-width: 479px) {
+      .site-header-inner { padding-left: 16px; padding-right: 16px; }
+      .site-header-inner > div > a { padding: 10px; }
+      .site-header-inner > div > a > span:last-child { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
 </head>
 <body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen">
 <!-- ================= TOP NAVIGATION BAR ================= -->
 <header class="bg-surface-pure border-b border-border-grid shadow-[0px_4px_0px_0px_rgba(19,78,57,0.08)] sticky top-0 z-50 w-full">
-<div class="h-[72px] w-full px-6 lg:px-12 max-w-container-max mx-auto flex items-center justify-between">
+<div class="site-header-inner w-full px-6 lg:px-12 max-w-container-max mx-auto flex items-center justify-between">
 <!-- Brand Anchor -->
-<a class="flex items-center gap-3 group focus:outline-none" href="#">
+<a class="flex items-center gap-3 group" href="#inicio">
 <div class="w-8 h-8 bg-primary flex items-center justify-center border border-border-active">
 <span class="material-symbols-outlined text-surface-pure text-lg" style="font-variation-settings: 'FILL' 1;">eco</span>
 </div>
@@ -159,18 +178,18 @@
 </div>
 </a>
 <!-- Desktop Links -->
-<nav class="hidden lg:flex items-center gap-7">
-<a class="text-primary border-b-2 border-primary pb-1 font-label-interactive text-label-interactive" href="#inicio">Início</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#solucoes">Licenciamento Ambiental</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#solucoes">Gestão Ambiental</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#solucoes">Assessoria Jurídica</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#posicionamento">Sobre</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-interactive text-label-interactive" href="#contato">Contato</a>
+<nav class="site-nav font-label-interactive text-label-interactive" aria-label="Navegação principal">
+<a href="#inicio" aria-current="location">Início</a>
+<a href="#posicionamento">Sobre</a>
+<a href="#licenciamento-ambiental">Licenciamento Ambiental</a>
+<a href="#gestao-ambiental">Gestão Ambiental</a>
+<a href="#assessoria-juridica">Assessoria Jurídica</a>
+<a href="#contato">Contato</a>
 </nav>
 <!-- Trailing Action -->
 <div class="flex items-center gap-3">
-<a class="inline-flex items-center gap-2 bg-primary hover:bg-[#00A887] text-surface-pure px-5 py-2.5 font-label-interactive text-label-interactive transition-colors duration-150 border border-primary" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-sm">call</span>
+<a aria-label="Fale com a Biodiverse no WhatsApp" class="inline-flex items-center gap-2 bg-primary hover:bg-[#00A887] text-surface-pure px-5 py-2.5 font-label-interactive text-label-interactive transition-colors duration-150 border border-primary" href="https://api.whatsapp.com/send/?phone=5551993027557&amp;text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es.&amp;type=phone_number&amp;app_absent=0" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm" aria-hidden="true">call</span>
 <span>Fale com a Biodiverse</span>
 </a>
 </div>
@@ -376,7 +395,7 @@
 <!-- Solutions Bento Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <!-- CARD 01: LICENCIAMENTO AMBIENTAL (Destaque visual) -->
-<div class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div id="licenciamento-ambiental" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
 <div>
 <div class="flex items-center justify-between mb-6">
 <span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 01</span>
@@ -404,7 +423,7 @@
 </a>
 </div>
 <!-- CARD 02: GESTÃO AMBIENTAL -->
-<div class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div id="gestao-ambiental" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
 <div>
 <div class="flex items-center justify-between mb-6">
 <span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 02</span>
@@ -432,7 +451,7 @@
 </a>
 </div>
 <!-- CARD 03: ASSESSORIA JURÍDICA AMBIENTAL -->
-<div class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div id="assessoria-juridica" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
 <div>
 <div class="flex items-center justify-between mb-6">
 <span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 03</span>
@@ -819,4 +838,35 @@
 </svg>
 </a>
 </aside>
+<script>
+(() => {
+  const header = document.querySelector('header');
+  const links = [...document.querySelectorAll('.site-nav a')];
+  const targets = links.map(link => document.querySelector(link.hash));
+  let selected = location.hash;
+  function updateNavigation() {
+    const offset = header.getBoundingClientRect().height + 32;
+    let active = 0;
+    targets.forEach((target, index) => {
+      if (target.getBoundingClientRect().top <= offset) active = index;
+    });
+    // Services share a row on desktop: preserve the selected service in that row.
+    const selectedIndex = links.findIndex(link => link.hash === selected);
+    if (selectedIndex >= 0 && Math.abs(targets[selectedIndex].getBoundingClientRect().top - targets[active].getBoundingClientRect().top) < 2) active = selectedIndex;
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) active = links.length - 1;
+    links.forEach((link, index) => {
+      if (index === active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+    updateNavigation();
+  }).observe(header);
+  links.forEach(link => link.addEventListener('click', () => { selected = link.hash; }));
+  window.addEventListener('hashchange', () => { selected = location.hash; updateNavigation(); });
+  window.addEventListener('scroll', updateNavigation, { passive: true });
+  updateNavigation();
+})();
+</script>
 </body></html>
