@@ -161,6 +161,12 @@
       .site-header-inner > div > a > span:last-child { display: none; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    #solucoes [tabindex="-1"]:target {
+      background-color: #e6f5f1;
+      border-color: #128c7e;
+      outline: 3px solid #128c7e;
+      outline-offset: 4px;
+    }
 </style>
 </head>
 <body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen">
@@ -863,7 +869,17 @@
     document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
     updateNavigation();
   }).observe(header);
-  links.forEach(link => link.addEventListener('click', () => { selected = link.hash; }));
+  links.forEach(link => link.addEventListener('click', event => {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    selected = link.hash;
+    const target = document.querySelector(selected);
+    if (location.hash !== selected) history.pushState(null, '', selected);
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    updateNavigation();
+  }));
   window.addEventListener('hashchange', () => { selected = location.hash; updateNavigation(); });
   window.addEventListener('scroll', updateNavigation, { passive: true });
   updateNavigation();
