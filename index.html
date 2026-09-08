@@ -167,6 +167,12 @@
       outline: 3px solid #128c7e;
       outline-offset: 4px;
     }
+    /* Frame the supplied image to hide its empty margins without altering the logo. */
+    .brand-logo { display: block; position: relative; overflow: hidden; aspect-ratio: 1050 / 704; background: #f7f7f7; }
+    .brand-logo img { position: absolute; width: 121.8095%; max-width: none; height: auto; left: -10.6667%; top: -63.6364%; }
+    .brand-logo-header { width: 144px; margin: 8px 0; }
+    .brand-logo-footer { width: 240px; max-width: 100%; }
+    .brand-logo:focus-visible { outline: 2px solid #128c7e; outline-offset: 4px; }
 </style>
 </head>
 <body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen">
@@ -174,14 +180,8 @@
 <header class="bg-surface-pure border-b border-border-grid shadow-[0px_4px_0px_0px_rgba(19,78,57,0.08)] sticky top-0 z-50 w-full">
 <div class="site-header-inner w-full px-6 lg:px-12 max-w-container-max mx-auto flex items-center justify-between">
 <!-- Brand Anchor -->
-<a class="flex items-center gap-3 group" href="#inicio">
-<div class="w-8 h-8 bg-primary flex items-center justify-center border border-border-active">
-<span class="material-symbols-outlined text-surface-pure text-lg" style="font-variation-settings: 'FILL' 1;">eco</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm tracking-tight font-bold text-primary">BIODIVERSE</span>
-<span class="font-label-technical text-[9px] tracking-widest text-technical-sage uppercase -mt-1">Serviços Ambientais</span>
-</div>
+<a class="brand-logo brand-logo-header" href="#inicio" aria-label="Biodiverse — Início">
+<img src="assets/biodiverse-logo.jpeg" alt="BDV Biodiverse — Estratégias Ambientais" width="1279" height="1600" fetchpriority="high" decoding="async"/>
 </a>
 <!-- Desktop Links -->
 <nav class="site-nav font-label-interactive text-label-interactive" aria-label="Navegação principal">
@@ -766,12 +766,9 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
 <!-- Col 1: Brand Anchor -->
 <div class="lg:col-span-2 space-y-4">
-<div class="flex items-center gap-3">
-<div class="w-8 h-8 bg-surface-pure text-primary flex items-center justify-center font-bold">
-<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">eco</span>
-</div>
-<span class="font-headline-sm text-headline-sm font-bold text-surface-pure">BIODIVERSE</span>
-</div>
+<a class="brand-logo brand-logo-footer" href="#inicio" aria-label="Biodiverse — Início">
+<img src="assets/biodiverse-logo.jpeg" alt="BDV Biodiverse — Estratégias Ambientais" width="1279" height="1600" loading="lazy" decoding="async"/>
+</a>
 <p class="font-body-sm text-body-sm text-technical-sage max-w-sm leading-relaxed">
             Consultoria técnica, engenharia ambiental e assessoria jurídica regulatória. Transformando obrigações ambientais em estabilidade e segurança jurídica.
           </p>
