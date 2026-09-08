@@ -173,6 +173,10 @@
     .brand-logo-header { width: 144px; margin: 8px 0; }
     .brand-logo-footer { width: 240px; max-width: 100%; }
     .brand-logo:focus-visible { outline: 2px solid #128c7e; outline-offset: 4px; }
+    .services-opening > div > div:first-child h1 { color: #fff; }
+    .services-opening > div > div:first-child > div > span { color: #98d8bd; }
+    .services-opening > div > div:first-child > a { color: #98d8bd; }
+    .services-opening > div > div:first-child > a:hover { color: #fff; }
 </style>
 </head>
 <body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen">
@@ -186,10 +190,10 @@
 <!-- Desktop Links -->
 <nav class="site-nav font-label-interactive text-label-interactive" aria-label="Navegação principal">
 <a href="#inicio" aria-current="location">Início</a>
-<a href="#posicionamento">Sobre</a>
 <a href="#licenciamento-ambiental">Licenciamento Ambiental</a>
 <a href="#gestao-ambiental">Gestão Ambiental</a>
 <a href="#assessoria-juridica">Assessoria Jurídica</a>
+<a href="#posicionamento">Sobre</a>
 <a href="#contato">Contato</a>
 </nav>
 <!-- Trailing Action -->
@@ -201,8 +205,112 @@
 </div>
 </div>
 </header>
+<div id="inicio">
+<!-- ================= CORE SOLUTIONS / SERVICES (INSPIRADO NOS CARDS LZ) ================= -->
+<section class="services-opening py-12 lg:py-16 bg-surface-dark border-b border-border-grid" id="solucoes">
+<div class="max-w-container-max mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div>
+<span class="font-label-technical text-label-technical text-technical-sage uppercase tracking-widest block mb-2">Nossas Soluções</span>
+<h1 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Soluções para desafios regulatórios complexos.</h1>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-interactive text-label-interactive hover:text-secondary transition-colors group" href="#contato">
+<span>Solicite um orçamento</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Solutions Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- CARD 01: LICENCIAMENTO AMBIENTAL (Destaque visual) -->
+<div id="licenciamento-ambiental" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 01</span>
+<span class="bg-[#E6F5F1] text-secondary border border-secondary px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase font-bold">Prioridade Máxima</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Licenciamento Ambiental</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+              Condução integral dos processos licitatórios nas três fases regulatórias (LP, LI e LO). Elaboramos Estudos de Impacto, Planos de Controle Ambiental e acompanhamos a tramitação junto à FEPAM, IBAMA e secretarias municipais.
+            </p>
+<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Licença Prévia, de Instalação e de Operação
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Renovação tempestiva e controle de prazos
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Diagnósticos, EIA/RIMA e RCA/PCA
+              </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
+<span>Saiba mais</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 02: GESTÃO AMBIENTAL -->
+<div id="gestao-ambiental" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 02</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase">Operacional</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Gestão Ambiental</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+              Monitoramento preventivo e implementação de rotinas de sustentabilidade para manter a empresa permanentemente regular perante as condicionantes estabelecidas nas licenças ambientais ativas.
+            </p>
+<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Plano de Gerenciamento de Resíduos Sólidos (PGRS)
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Monitoramento e auditoria de efluentes e emissões
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Gestão e cumprimento de condicionantes operacionais
+              </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
+<span>Saiba mais</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 03: ASSESSORIA JURÍDICA AMBIENTAL -->
+<div id="assessoria-juridica" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 03</span>
+<span class="bg-[#E6F5F1] text-secondary border border-secondary px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase font-bold">Defesa &amp; TACs</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Assessoria Jurídica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+              Advocacia preventiva e contenciosa especializada em Direito Ambiental. Defesa técnica perante autos de infração, celebração de Termos de Ajustamento de Conduta (TAC) e desconstituição de penalidades arbitrárias.
+            </p>
+<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Defesas administrativas de multas e embargos
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Negociação e acompanhamento de TACs e Termos
+              </li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-sm">check</span> Pareceres técnicos jurídicos e Due Diligence ambiental
+              </li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
+<span>Saiba mais</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
 <!-- ================= HERO SECTION (LZ AMBIENTAL STYLE) ================= -->
-<section class="relative bg-surface-dark text-surface-pure min-h-[640px] lg:min-h-[720px] flex items-center overflow-hidden border-b border-border-grid" id="inicio">
+<section class="relative bg-surface-dark text-surface-pure min-h-[640px] lg:min-h-[720px] flex items-center overflow-hidden border-b border-border-grid" id="apresentacao">
 <!-- Background Technical Imagery -->
 <div class="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
 <img alt="Consultoria Ambiental Especializada" class="w-full h-full object-cover object-center" data-alt="Technical aerial orthophoto of an engineered industrial environmental intervention site, showing water quality testing basins and precise environmental buffer zones under diffuse overcast laboratory lighting, grading from deep forest green to slate teal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeo3Yat4cvtQWpmvLTOHZ-oH5BcYh-SK1xbP4Kihiypl55F7WXgftpLFw7vigC_oMRkqnYgMgS81oHIn-jkGWjBbxq1JquJ0rp-d0YXwSrfes2gYdHeueJ31JcozUSnprU2FRNFXRMYdwLauQWnz-GPE3Kj-GD9MDodsfALJnyt_rs_gwL8U_h1GRIoHsHwPINQw7_eUbL8_a0doXPeQ440OfxIzIcnHeDfUYv-P0gDX3Gv1i2eFzx"/>
@@ -219,9 +327,9 @@
             </span>
 </div>
 <!-- Hero Headline -->
-<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero tracking-tight text-surface-pure max-w-3xl">
+<h2 class="font-display-hero text-display-hero-mobile lg:text-display-hero tracking-tight text-surface-pure max-w-3xl">
             Soluções ambientais para sua empresa operar com <span class="text-secondary-fixed underline decoration-2 underline-offset-8">segurança</span> e regularidade.
-          </h1>
+          </h2>
 <!-- Hero Subtitle -->
 <p class="font-body-lg text-body-lg text-surface-subtle/90 max-w-2xl font-light leading-relaxed">
             Licenciamento ambiental, gestão ambiental e assessoria jurídica ambiental para empresas que precisam estar em rigorosa conformidade com a legislação e preparadas para os desafios do negócio.
@@ -385,108 +493,7 @@
 </div>
 </div>
 </section>
-<!-- ================= CORE SOLUTIONS / SERVICES (INSPIRADO NOS CARDS LZ) ================= -->
-<section class="py-24 bg-surface-pure border-b border-border-grid" id="solucoes">
-<div class="max-w-container-max mx-auto px-6 lg:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-<div>
-<span class="font-label-technical text-label-technical text-technical-sage uppercase tracking-widest block mb-2">Nossas Soluções</span>
-<h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary">Soluções para desafios regulatórios complexos.</h2>
-</div>
-<a class="inline-flex items-center gap-2 text-primary font-label-interactive text-label-interactive hover:text-secondary transition-colors group" href="#contato">
-<span>Ver todas as soluções</span>
-<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<!-- Solutions Bento Grid -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<!-- CARD 01: LICENCIAMENTO AMBIENTAL (Destaque visual) -->
-<div id="licenciamento-ambiental" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
-<div>
-<div class="flex items-center justify-between mb-6">
-<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 01</span>
-<span class="bg-[#E6F5F1] text-secondary border border-secondary px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase font-bold">Prioridade Máxima</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-4">Licenciamento Ambiental</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
-              Condução integral dos processos licitatórios nas três fases regulatórias (LP, LI e LO). Elaboramos Estudos de Impacto, Planos de Controle Ambiental e acompanhamos a tramitação junto à FEPAM, IBAMA e secretarias municipais.
-            </p>
-<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Licença Prévia, de Instalação e de Operação
-              </li>
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Renovação tempestiva e controle de prazos
-              </li>
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Diagnósticos, EIA/RIMA e RCA/PCA
-              </li>
-</ul>
-</div>
-<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
-<span>Saiba mais</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- CARD 02: GESTÃO AMBIENTAL -->
-<div id="gestao-ambiental" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
-<div>
-<div class="flex items-center justify-between mb-6">
-<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 02</span>
-<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase">Operacional</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-4">Gestão Ambiental</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
-              Monitoramento preventivo e implementação de rotinas de sustentabilidade para manter a empresa permanentemente regular perante as condicionantes estabelecidas nas licenças ambientais ativas.
-            </p>
-<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Plano de Gerenciamento de Resíduos Sólidos (PGRS)
-              </li>
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Monitoramento e auditoria de efluentes e emissões
-              </li>
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Gestão e cumprimento de condicionantes operacionais
-              </li>
-</ul>
-</div>
-<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
-<span>Saiba mais</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- CARD 03: ASSESSORIA JURÍDICA AMBIENTAL -->
-<div id="assessoria-juridica" tabindex="-1" class="bg-surface-pure border border-border-grid border-t-[3px] border-t-primary p-8 flex flex-col justify-between hover:border-t-secondary transition-all group shadow-[0px_4px_0px_0px_rgba(19,78,57,0.06)] hover:shadow-[0px_4px_0px_0px_rgba(19,78,57,0.2)]">
-<div>
-<div class="flex items-center justify-between mb-6">
-<span class="font-label-technical text-label-technical text-technical-sage uppercase">Solução 03</span>
-<span class="bg-[#E6F5F1] text-secondary border border-secondary px-2 py-0.5 font-label-technical text-[10px] tracking-wider uppercase font-bold">Defesa &amp; TACs</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-4">Assessoria Jurídica</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
-              Advocacia preventiva e contenciosa especializada em Direito Ambiental. Defesa técnica perante autos de infração, celebração de Termos de Ajustamento de Conduta (TAC) e desconstituição de penalidades arbitrárias.
-            </p>
-<ul class="space-y-2 border-t border-border-grid pt-4 mb-6">
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Defesas administrativas de multas e embargos
-              </li>
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Negociação e acompanhamento de TACs e Termos
-              </li>
-<li class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
-<span class="material-symbols-outlined text-secondary text-sm">check</span> Pareceres técnicos jurídicos e Due Diligence ambiental
-              </li>
-</ul>
-</div>
-<a class="inline-flex items-center gap-2 font-label-interactive text-label-interactive text-primary group-hover:text-secondary transition-colors mt-4" href="#contato">
-<span>Saiba mais</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
+
 <!-- ================= PROBLEM / PAIN POINT SECTION (DARK DRAMATIC CONTRAST) ================= -->
 <section class="py-24 bg-surface-dark text-surface-pure border-b border-border-grid relative overflow-hidden">
 <div class="max-w-container-max mx-auto px-6 lg:px-12 relative z-10">
